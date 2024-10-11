@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoa</title>
+</head>
+<body>
+    <h1>Pessoa</h1>
+    <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+        <select id="cidade">
+            <option value="1">Rio de Janeiro</option>
+            <option value="2">Nova Friburgo</option>
+            <option value="3">Bom Jardim</option>
+        </select>
+        <button id="adicionarCidade" >+</button>
+        <dialog id="dialogoCidade" >
+            <form >
+                <input type="text" id="nomeCidade" >
+                <button id="salvarCidade">Salvar</button>
+            </form>
+        </dialog>
+    </form>
+    <script>
+        adicionarCidade.onclick = e => {
+            e.preventDefault();
+            dialogoCidade.showModal();
+        };
+        salvarCidade.onclick = e => {
+            e.preventDefault();
+            const o = document.createElement( 'option' );
+            o.innerText = nomeCidade.value;
+            cidade.append( o );
+            dialogoCidade.close();
+        }
+    </script>
+</body>
+</html>

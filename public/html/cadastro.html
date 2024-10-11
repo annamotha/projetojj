@@ -1,0 +1,127 @@
+<div class="titulo">
+    <h1>Cadastro</h1>
+</div>
+
+<div id="principal" class="dados-pessoais">
+    <h4>Dados Pessoais</h4>
+    <form action="./../../src/modules/cadastro-aluno.ts" method="post">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Nome">
+        </div>
+        <div>
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" placeholder="Data de Nascimento">
+        </div>
+        <div>
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" placeholder="CPF">
+        </div>
+        <div>
+            <label for="logradouro">Logradouro</label>
+            <input type="text" id="logradouro" placeholder="Logradouro">
+        </div>
+        <div>
+            <label for="cep">CEP</label>
+            <input type="number" id="cep" placeholder="CEP"  >
+        </div>
+        <div>
+            <label for="complemento">Complemento</label>
+            <input placeholder="Complemento" id="complemento"></input>
+        </div>
+        <div>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" placeholder="Cidade">
+        </div>
+        <div>
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" placeholder="Estado">
+        </div>
+        <div>
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" placeholder="Bairro">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email">
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Senha">
+        </div>
+        <div>
+            <label for="tipoUsuario">Escolha o tipo de usuário</label>
+            <select id="tipoUsuario" name="tipoUsuario" aria-label="Escolha o tipo de usuário" onchange="showFields()">
+                <option value="professor" selected>Professor</option>
+                <option value="funcionario">Funcionário</option>
+                <option value="aluno">Aluno</option>
+            </select>
+        </div>
+        <div id="adminFields">
+            <label for="admin">Administrador</label>
+            <select id="admin" name="admin" aria-label="Administrador">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+        <div  id="ageFields">
+            <label for="maioridade">Maior de 18 anos</label>
+            <select id="maioridade" name="maioridade" aria-label="Maior de 18 anos" onchange="showFields()">
+                <option value="true" selected>Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+        <div class="responsavelLegal">
+            <h4>Dados Responsável Legal</h4>
+            <div>
+                <label for="nomeResponsavel">Nome</label>
+                <input type="text" id="nomeResponsavel" placeholder="Nome">
+            </div>
+            <div>
+                <label for="dataNascimentoResponsavel">Data de Nascimento</label>
+                <input type="text" id="dataNascimentoResponsavel" placeholder="Data Nascimento">
+            </div>
+            <div>
+                <label for="cpfResponsavel">CPF</label>
+                <input type="number" id="cpfResponsavel" placeholder="CPF">
+            </div>
+            <div>
+                <label for="logradouroResponsavel">Logradouro</label>
+                <input type="text" id="logradouroResponsavel" placeholder="Logradouro">
+            </div>
+            <div>
+                <label for="cepResponsavel" >CEP</label>
+                <input type="number" id="cepResponsavel"  placeholder="CEP" >
+            </div>
+            <div>
+                <label for="complementoResponsavel" >Complemento</label>
+                <input placeholder="Complemento" id="complementoResponsavel"></input>
+            </div>
+            <div>
+                <label for="cidadeResponsavel">Cidade</label>
+                <input type="text" id="cidadeResponsavel" placeholder="Cidade">
+            </div>
+            <div>
+                <label for="estadoResponsavel">Estado</label>
+                <input type="text" id="estadoResponsavel" placeholder="Estado">
+            </div>
+            <div>
+                <label for="bairroResponsavel">Bairro</label>
+                <input type="text" id="bairroResponsavel" placeholder="Bairro">
+            </div>
+            <div>
+                <label for="emailResponsavel">Email</label>
+                <input type="email" id="emailResponsavel" placeholder="Email">
+            </div>
+            <div>
+                <label for="senhaResponsavel">Senha</label>
+                <input type="password" id="senhaResponsavel" placeholder="Senha">
+            </div>
+        </div>
+        
+        <div class="botaoCadastrar">
+            <button id="botaoCadastrarPessoa" type="submit">Enviar</button>
+            <button type="reset">Resetar</button>
+        </div>
+    </form>
+</div>
